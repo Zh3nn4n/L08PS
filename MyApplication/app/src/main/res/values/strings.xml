@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Locating A Place</string>
+
+    <string-array name="branches">
+        <item>NORTH</item>
+        <item>CENTRAL</item>
+        <item>EAST</item>
+    </string-array>
 </resources>

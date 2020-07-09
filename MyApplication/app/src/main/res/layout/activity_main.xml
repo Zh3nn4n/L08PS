@@ -20,32 +20,11 @@
         android:textSize="18sp"
         android:text="We now have 3 Branches. Look below for the address and info" />
 
-    <LinearLayout
+    <Spinner
+        android:id="@+id/spinner"
+        android:entries="@array/branches"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/btn1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="North" />
-
-        <Button
-            android:id="@+id/btn2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Central" />
-
-        <Button
-            android:id="@+id/btn3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="East" />
-    </LinearLayout>
+        android:layout_height="wrap_content" />
 
     <fragment
         android:id="@+id/map"

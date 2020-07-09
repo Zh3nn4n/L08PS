@@ -41,8 +41,6 @@ public class MainActivity extends AppCompatActivity {
         SupportMapFragment mapFragment = (SupportMapFragment) fm.findFragmentById(R.id.map);
 
 
-
-
         mapFragment.getMapAsync(new OnMapReadyCallback() {
             @Override
             public void onMapReady(GoogleMap googleMap) {
@@ -109,5 +107,5 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-    
+
 }
