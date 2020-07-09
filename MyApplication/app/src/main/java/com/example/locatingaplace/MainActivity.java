@@ -95,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
                 googleMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
                     @Override
                     public boolean onMarkerClick(Marker marker) {
-                        
+                                
                             Toast.makeText(MainActivity.this, marker.getTitle(), Toast.LENGTH_SHORT).show();
 
                         return false;
