@@ -95,9 +95,7 @@ public class MainActivity extends AppCompatActivity {
                 googleMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
                     @Override
                     public boolean onMarkerClick(Marker marker) {
-                                
                             Toast.makeText(MainActivity.this, marker.getTitle(), Toast.LENGTH_SHORT).show();
-
                         return false;
                     }
                 });
@@ -109,15 +107,17 @@ public class MainActivity extends AppCompatActivity {
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                if (i == 0){
-                    LatLng north = new LatLng(1.461708,103.813500);
-                    map.moveCamera(CameraUpdateFactory.newLatLngZoom(north, 15));
-                } else if (i == 1){
-                    LatLng central = new LatLng(1.300542,103.841226);
-                    map.moveCamera(CameraUpdateFactory.newLatLngZoom(central, 15));
-                } else {
-                    LatLng east = new LatLng(1.350057,103.934452);
-                    map.moveCamera(CameraUpdateFactory.newLatLngZoom(east, 15));
+                if (map != null) {
+                    if (i == 0) {
+                        LatLng north = new LatLng(1.461708, 103.813500);
+                        map.moveCamera(CameraUpdateFactory.newLatLngZoom(north, 15));
+                    } else if (i == 1) {
+                        LatLng central = new LatLng(1.300542, 103.841226);
+                        map.moveCamera(CameraUpdateFactory.newLatLngZoom(central, 15));
+                    } else {
+                        LatLng east = new LatLng(1.350057, 103.934452);
+                        map.moveCamera(CameraUpdateFactory.newLatLngZoom(east, 15));
+                    }
                 }
             }
 
